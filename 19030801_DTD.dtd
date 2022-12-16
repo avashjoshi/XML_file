@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT motorbikes (motorbikesInfo,buybikes)>
+<!ATTLIST motorbikes
+  xmlns CDATA #FIXED ''
+  xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
+  showroomID NMTOKEN #REQUIRED
+  xsi:noNamespaceSchemaLocation NMTOKEN #REQUIRED>
+
+
+<!ELEMENT motorbikesInfo (logo,name,address,contact,email,founder,
+                          establishment)>
+<!ATTLIST motorbikesInfo
+  xmlns CDATA #FIXED ''
+  PanNo CDATA #REQUIRED>
+
+<!ELEMENT buybikes (BMWspecs,Hondaspecs,Suzukispecs,Ducatispecs)>
+<!ATTLIST buybikes
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT logo (#PCDATA)>
+<!ATTLIST logo
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT address (city,province,country)>
+<!ATTLIST address
+  xmlns CDATA #FIXED ''
+  location-ID NMTOKEN #REQUIRED>
+
+<!ELEMENT contact (#PCDATA)>
+<!ATTLIST contact
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST email
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT founder (#PCDATA)>
+<!ATTLIST founder
+  xmlns CDATA #FIXED ''
+  owner CDATA #REQUIRED>
+
+<!ELEMENT establishment (#PCDATA)>
+<!ATTLIST establishment
+  xmlns CDATA #FIXED ''
+  date NMTOKEN #REQUIRED>
+
+<!ELEMENT BMWspecs (BMW)+>
+<!ATTLIST BMWspecs
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Hondaspecs (Honda)+>
+<!ATTLIST Hondaspecs
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Suzukispecs (Suzuki)+>
+<!ATTLIST Suzukispecs
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Ducatispecs (Ducati)>
+<!ATTLIST Ducatispecs
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT city (#PCDATA)>
+<!ATTLIST city
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT province (#PCDATA)>
+<!ATTLIST province
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT country (#PCDATA)>
+<!ATTLIST country
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT BMW (modelName,availability,price,bike)>
+<!ATTLIST BMW
+  xmlns CDATA #FIXED ''
+  BMW-Id NMTOKEN #REQUIRED>
+
+<!ELEMENT Honda (modelName,availability,price,bike)>
+<!ATTLIST Honda
+  xmlns CDATA #FIXED ''
+  Honda-Id NMTOKEN #REQUIRED>
+
+<!ELEMENT Suzuki (modelName,availability,price,bike)>
+<!ATTLIST Suzuki
+  xmlns CDATA #FIXED ''
+  Suzuki-Id NMTOKEN #REQUIRED>
+
+<!ELEMENT Ducati (modelName,availability,price,bike)>
+<!ATTLIST Ducati
+  xmlns CDATA #FIXED ''
+  Ducati-Id NMTOKEN #REQUIRED>
+
+<!ELEMENT modelName (#PCDATA)>
+<!ATTLIST modelName
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT availability (#PCDATA)>
+<!ATTLIST availability
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT bike (Engine,fuelcapacity,displacement,color,weight)>
+<!ATTLIST bike
+  xmlns CDATA #FIXED ''
+  bikeId NMTOKEN #REQUIRED>
+
+<!ELEMENT Engine (enginetype,power)>
+<!ATTLIST Engine
+  xmlns CDATA #FIXED ''
+  Engine-ID CDATA #REQUIRED>
+
+<!ELEMENT fuelcapacity (#PCDATA)>
+<!ATTLIST fuelcapacity
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT displacement (#PCDATA)>
+<!ATTLIST displacement
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT color (#PCDATA)>
+<!ATTLIST color
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT weight (#PCDATA)>
+<!ATTLIST weight
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT enginetype (#PCDATA)>
+<!ATTLIST enginetype
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT power (#PCDATA)>
+<!ATTLIST power
+  xmlns CDATA #FIXED ''>

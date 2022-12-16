@@ -1,0 +1,182 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="motorbikes" type="motorbikesType"/>
+  <xs:complexType name="addressType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="city"/>
+      <xs:element type="xs:string" name="province"/>
+      <xs:element type="xs:string" name="country"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="location-ID"/>
+  </xs:complexType>
+  <xs:complexType name="founderType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="owner"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="establishmentType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:date" name="date"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="motorbikesInfoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="logo"/>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="addressType" name="address"/>
+      <xs:element type="xs:int" name="contact"/>
+      <xs:element type="xs:string" name="email"/>
+      <xs:element type="founderType" name="founder"/>
+      <xs:element type="establishmentType" name="establishment"/>
+    </xs:sequence>
+    <xs:attribute type="xs:int" name="PanNo"/>
+  </xs:complexType>
+  <xs:complexType name="EngineType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="enginetype"/>
+      <xs:element type="xs:string" name="power"/>
+    </xs:sequence>
+    <xs:attribute type="xs:short" name="Engine-ID" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="bikeType">
+    <xs:sequence>
+      <xs:element type="EngineType" name="Engine"/>
+      <xs:element type="xs:string" name="fuelcapacity"/>
+      <xs:element type="xs:string" name="displacement"/>
+      <xs:element type="xs:string" name="color"/>
+      <xs:element type="xs:string" name="weight"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="bikeId" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="BMWType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="modelName"/>
+      <xs:element type="xs:byte" name="availability"/>
+      <xs:element type="xs:string" name="price"/>
+      <xs:element type="bikeType" name="bike"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="BMW-Id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="BMWspecsType">
+    <xs:sequence>
+      <xs:element type="BMWType" name="BMW" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HondaType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="modelName"/>
+      <xs:element type="xs:byte" name="availability"/>
+      <xs:element type="xs:string" name="price"/>
+      <xs:element type="bikeType" name="bike"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="Honda-Id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="HondaspecsType">
+    <xs:sequence>
+      <xs:element type="HondaType" name="Honda" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SuzukiType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="modelName"/>
+      <xs:element type="xs:byte" name="availability"/>
+      <xs:element type="xs:string" name="price"/>
+      <xs:element type="bikeType" name="bike"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="Suzuki-Id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="SuzukispecsType">
+    <xs:sequence>
+      <xs:element type="SuzukiType" name="Suzuki" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DucatiType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="modelName"/>
+      <xs:element type="xs:byte" name="availability"/>
+      <xs:element type="xs:string" name="price"/>
+      <xs:element type="bikeType" name="bike"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="Ducati-Id"/>
+  </xs:complexType>
+  <xs:complexType name="DucatispecsType">
+    <xs:sequence>
+      <xs:element type="DucatiType" name="Ducati"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buybikesType">
+    <xs:sequence>
+      <xs:element type="BMWspecsType" name="BMWspecs"/>
+      <xs:element type="HondaspecsType" name="Hondaspecs"/>
+      <xs:element type="SuzukispecsType" name="Suzukispecs"/>
+      <xs:element type="DucatispecsType" name="Ducatispecs"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="motorbikesType">
+    <xs:sequence>
+      <xs:element type="motorbikesInfoType" name="motorbikesInfo"/>
+      <xs:element type="buybikesType" name="buybikes"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="showroomID"/>
+  </xs:complexType>
+  
+	<!-- restrictions for showroomNo-->
+	<xs:simpleType name="showroomID">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="SR-\d{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- restrictions for type code-->
+	<xs:simpleType name="PanNo">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="\d{8}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- restrictions for showroomNo-->
+	<xs:simpleType name="address">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="NP-\d{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- restrictions for telephoneNumber-->
+	<xs:simpleType name="contact">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{9}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- restrictions for bikesCategory-->
+<xs:element name="buybikes">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BMW"/>
+      <xs:enumeration value="Honda"/>
+      <xs:enumeration value="Suzuki"/>
+      <xs:enumeration value="Ducati"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+     <!--restrictions for quantity of bikes-->
+    <xs:simpleType name="availability">
+      <xs:restriction base="xs:int">
+		 <xs:minInclusive value="1" />
+         <xs:maxInclusive value="10" />
+      </xs:restriction>
+   </xs:simpleType>
+
+     <!--restrictions for whitespace in color of bikes-->
+<xs:element name="color">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:whiteSpace value="preserve"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>  
+</xs:schema>

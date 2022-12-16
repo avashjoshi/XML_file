@@ -1,0 +1,256 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="motorbikes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="motorbikesInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="logo"/>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element name="address">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="city"/>
+                    <xs:element type="xs:string" name="province"/>
+                    <xs:element type="xs:string" name="country"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="location-ID"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:int" name="contact"/>
+              <xs:element type="xs:string" name="email"/>
+              <xs:element name="founder">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="owner"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="establishment">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:date" name="date"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:int" name="PanNo"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="buybikes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BMWspecs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="BMW" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="modelName"/>
+                          <xs:element type="xs:byte" name="availability"/>
+                          <xs:element type="xs:string" name="price"/>
+                          <xs:element name="bike">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Engine">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="enginetype"/>
+                                      <xs:element type="xs:string" name="power"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:short" name="Engine-ID" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="fuelcapacity"/>
+                                <xs:element type="xs:string" name="displacement"/>
+                                <xs:element type="xs:string" name="color"/>
+                                <xs:element type="xs:string" name="weight"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="bikeId" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="BMW-Id" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Hondaspecs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Honda" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="modelName"/>
+                          <xs:element type="xs:byte" name="availability"/>
+                          <xs:element type="xs:string" name="price"/>
+                          <xs:element name="bike">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Engine">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="enginetype"/>
+                                      <xs:element type="xs:string" name="power"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:short" name="Engine-ID" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="fuelcapacity"/>
+                                <xs:element type="xs:string" name="displacement"/>
+                                <xs:element type="xs:string" name="color"/>
+                                <xs:element type="xs:string" name="weight"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="bikeId" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="Honda-Id" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Suzukispecs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Suzuki" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="modelName"/>
+                          <xs:element type="xs:byte" name="availability"/>
+                          <xs:element type="xs:string" name="price"/>
+                          <xs:element name="bike">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Engine">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="enginetype"/>
+                                      <xs:element type="xs:string" name="power"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:short" name="Engine-ID" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="fuelcapacity"/>
+                                <xs:element type="xs:string" name="displacement"/>
+                                <xs:element type="xs:string" name="color"/>
+                                <xs:element type="xs:string" name="weight"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="bikeId" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="Suzuki-Id" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Ducatispecs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Ducati">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="modelName"/>
+                          <xs:element type="xs:byte" name="availability"/>
+                          <xs:element type="xs:string" name="price"/>
+                          <xs:element name="bike">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Engine">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="enginetype"/>
+                                      <xs:element type="xs:string" name="power"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:short" name="Engine-ID"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="fuelcapacity"/>
+                                <xs:element type="xs:string" name="displacement"/>
+                                <xs:element type="xs:string" name="color"/>
+                                <xs:element type="xs:string" name="weight"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="bikeId"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="Ducati-Id"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="showroomID"/>
+    </xs:complexType>
+  </xs:element>
+  
+	<!-- restrictions for showroomNo-->
+	<xs:simpleType name="showroomID">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="SR-\d{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- restrictions for type code-->
+	<xs:simpleType name="PanNo">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="\d{8}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- restrictions for showroomNo-->
+	<xs:simpleType name="address">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="NP-\d{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- restrictions for telephoneNumber-->
+	<xs:simpleType name="contact">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{9}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- restrictions for bikesCategory-->
+<xs:element name="buybikes">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BMW"/>
+      <xs:enumeration value="Honda"/>
+      <xs:enumeration value="Suzuki"/>
+      <xs:enumeration value="Ducati"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+     <!--restrictions for quantity of bikes-->
+    <xs:simpleType name="availability">
+      <xs:restriction base="xs:int">
+		 <xs:minInclusive value="1" />
+         <xs:maxInclusive value="10" />
+      </xs:restriction>
+   </xs:simpleType>
+
+     <!--restrictions for whitespace in color of bikes-->
+<xs:element name="color">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:whiteSpace value="preserve"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+  
+</xs:schema>

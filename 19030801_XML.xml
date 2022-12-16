@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" ?>
+<!DOCTYPE motorbikes SYSTEM "19030801_DTD.dtd" [
+]> 
+
+<motorbikes showroomID = "SR-999"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:noNamespaceSchemaLocation="19030801_russiandoll.xsd">
+				 
+    <motorbikesInfo PanNo="37493648">
+					<logo></logo>
+					<name>AJ MOTOR BIKES PVT LTD</name> 
+					<address location-ID="NP234">
+							<city>Pokhara,</city>
+							<province>Gandaki,</province>
+							<country>Nepal</country>			
+					</address>
+					<contact>061522929</contact>
+					<email>ajmotorbikesnp@gmail.com</email>
+					<founder owner="Avash Joshi"> </founder>
+					<establishment date="1997-12-26">
+					</establishment>
+	</motorbikesInfo>
+	
+
+	<buybikes>
+		<BMWspecs>
+			<BMW BMW-Id="B01" > 
+				<modelName>BMW S 1000 RR</modelName>
+				<availability>5</availability>
+				<price>$32900</price>
+				
+				<bike bikeId="S-01">
+					<Engine Engine-ID="9753">
+							<enginetype>Water/Oil-Cooled</enginetype>
+							<power>205hp</power>
+					</Engine>
+					<fuelcapacity>4.4 gal</fuelcapacity>
+					<displacement>999 cc</displacement>
+					<color>Motorsport</color>
+					<weight>100kg</weight>					
+				</bike>	
+			</BMW>
+			
+			<BMW BMW-Id="B02" > 
+				<modelName>BMW R 1250 GS</modelName>
+				<availability>10</availability>
+				<price>$20345</price>
+				
+				<bike bikeId="R11">
+				   	<Engine Engine-ID="1235">
+							<enginetype>Water/Oil-Cooled</enginetype>
+							<power>134hp</power>
+					</Engine>
+					<fuelcapacity>5.3 gal</fuelcapacity>
+					<displacement>1254cc</displacement>
+					<color>Ice Grey</color>
+					<weight>249kg</weight>					
+				</bike>	
+			</BMW>
+		</BMWspecs>
+			
+		<Hondaspecs>
+			<Honda Honda-Id="H-323" > 
+				<modelName>Honda Goldwing</modelName>
+				<availability>6</availability>
+				<price>$20690</price>
+				
+				<bike bikeId="G01">
+					<Engine Engine-ID="3579">
+							<enginetype>Water-Cooled,</enginetype>
+							<power>125hp</power>
+					</Engine>
+					<fuelcapacity>5.5 gal</fuelcapacity>
+					<displacement>1833cc</displacement>
+					<color>Matte Black Metallic</color>
+					<weight>357kg</weight>					
+				</bike>	
+			</Honda>
+			
+			<Honda Honda-Id="H-567" > 
+				<modelName>Honda CBR650R</modelName>
+				<availability>9</availability>
+				<price>$9699</price>
+				
+				<bike bikeId="C23">
+					<Engine Engine-ID="2468">
+							<enginetype>Liquid-Cooled</enginetype>
+							<power>82hp</power>
+					</Engine>
+					<fuelcapacity>4 gal</fuelcapacity>
+					<displacement>649cc</displacement>
+					<color>Grand Prix Red</color>
+					<weight>208kg</weight>					
+				</bike>	
+			</Honda>
+		</Hondaspecs>
+			
+		<Suzukispecs>
+			<Suzuki Suzuki-Id="Su-99" > 
+				<modelName>Suzuki Hayabusa</modelName>
+				<availability>3</availability>
+				<price>$18599</price>
+				
+				<bike bikeId="SH81">
+					<Engine Engine-ID="8976">
+							<enginetype>Liquid-Cooled</enginetype>
+							<power>172.2hp</power>
+					</Engine>
+					<fuelcapacity>5.3 gal</fuelcapacity>
+					<displacement>1340cc</displacement>
+					<color>Glass Sparkle Black</color>
+					<weight>264kg</weight>					
+				</bike>	
+			</Suzuki>
+			
+			<Suzuki Suzuki-Id="Su-88" > 
+				<modelName>Suzuki Gixxer SF 250</modelName>
+				<availability>4</availability>
+				<price>$2500</price>
+				
+				<bike bikeId="SF21">
+					<Engine Engine-ID="3454">
+							<enginetype>Oil-Cooled</enginetype>
+							<power>26.5hp</power>
+					</Engine>
+					<fuelcapacity>3.2 gal</fuelcapacity>
+					<displacement>249cc</displacement>
+					<color>Triton Blue</color>
+					<weight>161kg</weight>	
+				</bike>	
+			</Suzuki>
+		</Suzukispecs>
+		
+		<Ducatispecs>
+			<Ducati Ducati-Id="D11" > 
+				<modelName>Ducati Superleggera V4</modelName>
+				<availability>2</availability>
+				<price>$100000</price>
+				
+				<bike bikeId="V56">
+					<Engine Engine-ID="4576">
+							<enginetype>Liquid Cooled</enginetype>
+							<power>224hp</power>
+					</Engine>
+					<fuelcapacity>4.2 gal</fuelcapacity>
+					<displacement>998cc</displacement>
+					<color>Red SLV4</color>
+					<weight>159kg</weight>
+				</bike>	
+			</Ducati>		
+		</Ducatispecs>
+
+	</buybikes>
+</motorbikes>
